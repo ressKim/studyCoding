@@ -13,18 +13,20 @@ public class Sorting {
     public int[] solution() {
         int[] array = {1, 5, 2, 6, 3, 7, 4};
         int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
-        int[] result = new int[3];
+
+        int[] result = new int[commands.length];
 
         for (int j = 0; j < commands.length; j++) {
-            int[] test = new int[commands[j][1]-commands[j][0]+1];
+
+            int[] test = new int[commands[j][1] - commands[j][0] + 1];
             for (int a = commands[j][0]; a <= commands[j][1]; a++) {
-                test[commands[j][1]-a] = array[a-1];
+                test[commands[j][1] - a] = array[a - 1];
             }
-           Arrays.sort(test);
-            result[j] = test[commands[j][2]-1];
+            Arrays.sort(test);
+
+            result[j] = test[commands[j][2] - 1];
         }
 
-        int[] answer = result;
-        return answer;
+        return result;
     }
 }
