@@ -1,6 +1,10 @@
 package com.company.level1;
 
 import java.util.ArrayList;
+
+//import java.util.Arrays;
+//import java.util.Arrays;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Sorting {
@@ -12,12 +16,12 @@ public class Sorting {
         int[] result = new int[3];
 
         for (int j = 0; j < commands.length; j++) {
-            ArrayList<Integer> arrays = new ArrayList<>();
+            int[] test = new int[commands[j][1]-commands[j][0]+1];
             for (int a = commands[j][0]; a <= commands[j][1]; a++) {
-                arrays.add(array[a-1]);
+                test[commands[j][1]-a] = array[a-1];
             }
-            Collections.sort(arrays);
-            result[j] = arrays.get(commands[j][2]-1);
+           Arrays.sort(test);
+            result[j] = test[commands[j][2]-1];
         }
 
         int[] answer = result;
