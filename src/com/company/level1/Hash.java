@@ -1,5 +1,6 @@
 package com.company.level1;
 
+//미해결
 public class Hash {
 //프로그래머스 hash - lv1 완주하지 못한 선수
 
