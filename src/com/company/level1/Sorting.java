@@ -1,8 +1,6 @@
 package com.company.level1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Sorting {
     //K번째 수
